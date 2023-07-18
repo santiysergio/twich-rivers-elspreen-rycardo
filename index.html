@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Streams de Twitch</title>
+  <link rel="icon" type="image/png" href="https://download1586.mediafire.com/ng62np6u6q6go7Te-3qDaH2to5y1eOSaye0B_IZwEJZp_Tl_3kGV5ltLOXRVtEoHsgzDak4b9wazi6nX1lngPC0lf9jj8OUSoXpmdmFr-iY4rKZ_2R6VWHJTo1B8UG5D2CAv0gwVI40Nshm72rl1wYA4wyFtlvKRL1SihFb828Q/rd79yqrqezud452/pngwing.com.png">
+</head>
+  <style>
+    /* Agrega un fondo a la página */
+    body {
+      background-image: url('https://download1589.mediafire.com/mavsjjwqp83gcI5-AmoaoM1NisIVZQLx5BVNUwW4wt6OvdCft6--zud-qkO1CkxISYUuJuriE6yC8JTLfSR--2Cmi3kSKj3cdO-ZmRk1bNBcBmQVoxSyiVuch0u3aZ-47enp8CJY28SyRd5Dc2-vz5KHuGzznWn_d1PGohRO84k/r12ilxvg1ph0bxf/peakpx+%281%29.jpg');
+      background-size: cover;
+    }
+    /* Estilo para el encabezado */
+    #header {
+      display: flex;
+      align-items: center;
+    }
+    /* Estilo para el logotipo */
+    #logo {
+      width: 100px;
+      margin-right: 20px;
+    }
+    /* Estilo para el título */
+    h1 {
+      font-size: 36px;
+    }
+    /* Estilo para los streams de Twitch */
+    .twitch-stream {
+      border: 10px solid black;
+      margin-bottom: 40px;
+      width: 800px;
+      height: 600px;
+    }
+    /* Estilo para la fila superior de streams */
+    #top-row {
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+ 
+  <!-- Agrega la fila superior de streams -->
+  <div id="top-row">
+    <div class="twitch-stream" id="twitch-embed-rivers_gg"></div>
+    <div class="twitch-stream" id="twitch-embed-rickyedit"></div>
+  </div>
+
+  <!-- Agrega el stream inferior -->
+  <div class="twitch-stream" id="twitch-embed-elspreen"></div>
+
+  <!-- Carga el script de Twitch -->
+  <script src="https://player.twitch.tv/js/embed/v1.js"></script>
+
+  <!-- Crea objetos Twitch.Player para cada stream. Esto se mostrará dentro de los marcadores de posición -->
+  <script type="text/javascript">
+    new Twitch.Player("twitch-embed-rivers_gg", {
+      channel: "rivers_gg",
+      width: 800,
+      height: 600
+    });
+    new Twitch.Player("twitch-embed-rickyedit", {
+      channel: "rickyedit",
+      width: 800,
+      height: 600
+    });
+    new Twitch.Player("twitch-embed-elspreen", {
+      channel: "elspreen",
+      width: 800,
+      height: 600
+    });
+  </script>
+</body>
+</html>
